@@ -1,0 +1,39 @@
+<!-- 1744961913509 -->
+<html>
+  <head>
+    <meta name="description" content="Play Tunnel Rush online for free at FAF Games! Enjoy safe and fun unblocked games anywhere, no downloads needed, just click and start playing now.">
+    <script src="./patch/cloner-v2.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Tunnel Rush</title>
+    <link rel="stylesheet" href="style/style.css">
+	<script src="UnityLoader.js"></script>
+    <script src="UnityProgress.js"></script>
+    <script type="application/javascript" src="./patch/null.js?/js/main.js"></script>
+    <link href="/siteBuild/icon/siteIcon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "build.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
+    </script>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7EDWRD1GTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7EDWRD1GTS');
+</script>
+
+</head>
+  <body style= "margin: 0px; padding: 0px; overflow: hidden;">
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 100%; height: 95%; margin: auto;"></div>
+	  <div class="footer">
+	            <div class="webgl-logo"></div>
+	            <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+	            <div class="title">Tunnel Rush</div>
+	        </div>
+    </div>
+  </body>
+</html>
