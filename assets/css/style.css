@@ -67,7 +67,7 @@ This files contents are outlined below >>>>
 /* Container: force grid layout and remove legacy float layout */
 .clearfix.gamesContainer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  grid-template-columns: repeat(5, 1fr); /* 5 columns on large screens */
   gap: 24px; /* spacing between cards */
   align-items: start;
   justify-items: center; /* center card content inside their columns */
@@ -86,7 +86,7 @@ This files contents are outlined below >>>>
 /* Card inner wrapper — control max width so cards don't get too wide */
 .games-single-item {
   width: 100%;
-  max-width: 260px;   /* adjust to control card size */
+  max-width: 220px;   /* fits 5 columns on large screens */
   margin: 0 auto;
   text-align: center;
 }
@@ -151,9 +151,14 @@ This files contents are outlined below >>>>
 }
 
 /* Responsive breakpoints */
+@media (max-width: 1400px) {
+  .clearfix.gamesContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 @media (max-width: 1200px) {
   .clearfix.gamesContainer {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 900px) {
@@ -321,6 +326,14 @@ This files contents are outlined below >>>>
         
         .game-item:hover {
             background: #4e4b4b;
+        }
+
+        .search-more-hint {
+            padding: 0.5rem 0.7rem;
+            margin: 0;
+            font-size: 0.85rem;
+            color: #aaa;
+            border-top: 1px solid #2a2f3d;
         }
         
         .search-title {
@@ -503,7 +516,6 @@ a {
     -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
     text-decoration: none;
-     text-wrap: nowrap;
 }
 
 a:focus {
@@ -2369,11 +2381,27 @@ span.is-active {
 }
 
 .footer-top-area {
-	padding: 
+    padding: 60px 0 30px;
     position: relative;
 }
+
+.footer-top-area > .container > .row,
+.footer-top-area .footer-columns {
+    align-items: flex-start;
+}
+
+.footer-top-area .widget-content {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-top-area .widget-content > .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .single-footer {
-	margin-top: 30px;
+    margin-top: 30px;
 }
 
 .single-footer h3 {
